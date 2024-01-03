@@ -1,4 +1,4 @@
-# This README File is revoked with my own opinion
+# This README File is revised with my own opinion
 ## added at Jan 3 2024
 - these files are may adjusted by ME due to research.
 - 
