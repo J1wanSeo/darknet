@@ -24,7 +24,7 @@ void train_yolo(char *cfgfile, char *weightfile)
     int imgs = net.batch*net.subdivisions;
     int i = *net.seen/imgs;
     data train, buffer;
-
+ 
 
     layer l = net.layers[net.n - 1];
 

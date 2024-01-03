@@ -102,7 +102,7 @@ void forward_detection_layer(const detection_layer l, network_state state)
                 }
 
                 box truth = float_to_box(state.truth + truth_index + 1 + l.classes);
-                truth.x /= l.side;
+                truth.x /= l.side; // 첫번째 줄에서 location을 정의할 때 location = l.side*l.side 로 해서
                 truth.y /= l.side;
 
                 for(j = 0; j < l.n; ++j){
