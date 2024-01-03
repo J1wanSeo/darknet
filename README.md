@@ -1,3 +1,19 @@
+# This README File is revoked with my own opinion
+## added at Jan 3 2024
+- these files are may adjusted by ME due to research.
+- 
+
+
+
+
+
+
+
+
+
+
+
+***
 # Yolo v4, v3 and v2 for Windows and Linux
 
 * Read the FAQ:  https://www.ccoderun.ca/programming/darknet_faq/
