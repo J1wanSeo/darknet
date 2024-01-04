@@ -1,4 +1,3 @@
-added @ Wednesday Jan 3, 2024
 
 ## yolo.c
 
@@ -6,7 +5,7 @@ yolo.c
 - train_yolo
     - 최종적으로 train_yolo를 보면, 외부에서 기록된 cfg file과 weight 파일을 가지고 네트워크를 구성하여 사용하는 꼴(parse_ network_cfg함수 사용)
 
-- **test_yolo(char *cfgfile, char *weightfile, char *filename, float thresh)**
+- ***test_yolo(char *cfgfile, char *weightfile, char *filename, float thresh)***
     - image.c
     - network.c
     - detection_layer
@@ -35,6 +34,9 @@ detection det.는 결국 box에 구조체로 선언되어있음
 
 
 ## network.c
+- make_network 의 함수는 결국 network를 사용할 메모리를 할당해주는 역할에 제한
+    - 여러개의 layer로 network가 구성되므로 이를 가르키는 포인터 형태로 저장
+
 ## detection_layer
 - detection layer는 layer로 만든 구조체 -> 결국 layer와 모두 같으나 새로 정의만 해준 것
 - make_detection_layer
@@ -47,8 +49,10 @@ detection det.는 결국 box에 구조체로 선언되어있음
 ## box.c
 convolutional_layer.c // network.c // layer.c // image.c // yolo_layer.c // network.c
 
-1. activation_layer : 활성함수를 포함하는 레이어를 연결하는 역할  실제 활성함수는 activations.h에 포함되어 있음
-2. activations.c
+## activation_layer
+- 활성함수를 포함하는 레이어를 연결하는 역할  실제 활성함수는 activations.h에 포함되어 있음
+
+## activations.c
 
 ## layer
     layer의 struct를 정의하고 있고, 
@@ -56,14 +60,9 @@ convolutional_layer.c // network.c // layer.c // image.c // yolo_layer.c // netw
  결국 l.@ 로 호출되는 layer는 cnn의 과정에 존재하는 모든 특징을 포함함
  &rarr;  layer로  cnn 의 단계를 구성하는 방식임
 
- 4. convolutional_layer.c
+## convolutional_layer.c
 
 
- 5. network.c
-- make_network 의 함수는 결국 network를 사용할 메모리를 할당해주는 역할에 제한
-    - 여러개의 layer로 network가 구성되므로 이를 가르키는 포인터 형태로 저장
-
-- 
 
 ***
 - xcalloc , xmalloc, xrealloc 의 역할
