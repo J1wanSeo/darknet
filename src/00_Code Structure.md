@@ -37,6 +37,14 @@ detection det.는 결국 box에 구조체로 선언되어있음
 - make_network 의 함수는 결국 network를 사용할 메모리를 할당해주는 역할에 제한
     - 여러개의 layer로 network가 구성되므로 이를 가르키는 포인터 형태로 저장
 
+## parser.c
+- save_convoltuional_weights // save_binary_weights 등의 함수를 포함중 
+&rarr; train 과정에서 사용되는 듯 함. 
+    - fwrite 함수를 이용하여 weight 파일에 저장하는 방식 수행
+
+- load_weights_upto
+    weight를 rb로 fopen 한다.
+
 ## detection_layer
 - detection layer는 layer로 만든 구조체 -> 결국 layer와 모두 같으나 새로 정의만 해준 것
 - make_detection_layer
