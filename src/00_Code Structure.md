@@ -54,9 +54,14 @@ convolutional_layer.c // network.c // layer.c // image.c // yolo_layer.c // netw
 
 ## activations.c
 
-## layer
+## layer.h
     layer의 struct를 정의하고 있고, 
     layer_type , activation 종류, cost_type 을 포함
+    여기에서 저장되는 weight 는 
+    ```
+    float *weights
+    ```
+    로 저장되고 있음
  결국 l.@ 로 호출되는 layer는 cnn의 과정에 존재하는 모든 특징을 포함함
  &rarr;  layer로  cnn 의 단계를 구성하는 방식임
 
